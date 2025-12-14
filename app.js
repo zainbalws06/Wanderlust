@@ -15,7 +15,9 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(MethoOverride("_method"));
-
+app.use((req, res) => {
+  res.send("please visit /listings, this route not available anymore for now");
+});
 //ROUTES
 app.get("/listings", async (req, res) => {
   let allListings = await Listing.find();
