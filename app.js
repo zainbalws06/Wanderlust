@@ -6,18 +6,14 @@ const port = 8080;
 const Listing = require("./models/listing");
 const path = require("path");
 const MONGO_URL = process.env.MONGO_URL;
-const MethoOverride = require("method-override");
-const ejsMate = require("ejs-mate");
+const methoOverride = require("method-override");
 
 //Middlewares
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
-app.use(MethoOverride("_method"));
-app.get("/", (req, res) => {
-  res.send("please visit /listings, this route not available anymore for now");
-});
+app.use(methoOverride("_method"));
 //ROUTES
 app.get("/", (req, res) => {
   res.send("please visit /listings, this route not available anymore for now");
