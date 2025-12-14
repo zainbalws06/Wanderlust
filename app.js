@@ -39,7 +39,7 @@ app.post("/listings", async (req, res) => {
   let { title, description, image, price, location, country } = req.body;
   let newListing = await Listing.create({
     title: title,
-    desciption: description,
+    description: description,
     image: image,
     price: price,
     location: location,
