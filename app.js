@@ -24,6 +24,7 @@ app.get("/listings", async (req, res) => {
   let allListings = await Listing.find();
   res.render("listings/index.ejs", { allListings });
 });
+
 app.get("/listings/new", async (req, res) => {
   res.render("listings/new.ejs");
 });
