@@ -29,7 +29,7 @@ main();
 
 //ROUTES
 app.get("/", (req, res) => {
-  res.send("please visit /listings, this route not available anymore for now");
+  res.send("This route is under some developement, please visit /listings");
 });
 app.get("/listings", async (req, res) => {
   let allListings = await Listing.find();
