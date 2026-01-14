@@ -1,43 +1,25 @@
-/* .navbar{
+.navbar{
     height: 5rem;
-}
-.fa-regular{
-    color: #fe424d;
-    font-size: 2rem;
 }
 .nav-link{color: #222222 !important;}
 .nav-link{font-weight: 500 !important} 
 
-.body{display: flex;
-align-items: center;
-justify-content: center;} */
-
-/* ================= GLOBAL ================= */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff; /* white background */
+  background-color: #ffffff; 
   color: #333333;
   line-height: 1.6;
-  text-align: center; /* center all content by default */
-}
-
-/* ================= CONTAINER ================= */
-.container {
-  max-width: 1000px;
-  width: 90%;
-  margin: 2rem auto;
   text-align: center;
 }
 
-/* ================= HEADINGS ================= */
+
 h1, h2, h3, h4 {
   color: #222222;
   margin-bottom: 1rem;
 }
 
-/* ================= LISTING IMAGE ================= */
 img {
   max-width: 100%;
   height: auto;
@@ -93,23 +75,6 @@ form {
 }
 
 
-
-.navbar {
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
-}
-
-.nav-link {
-  color: #222222 !important;
-  font-weight: 500 !important;
-  margin-left: 1rem;
-  text-decoration: none;
-}
 
 .nav-link:hover {
   color: #fe424d !important;
