@@ -33,7 +33,7 @@ module.exports.editGet = async (req, res) => {
   let { id } = req.params;
   console.log(id);
   let listing = await Listing.findById(id);
-  res.render("/edit.ejs", { listing });
+  res.render("listings/edit.ejs", { listing });
   console.log(listing);
 };
 module.exports.idPut = async (req, res) => {

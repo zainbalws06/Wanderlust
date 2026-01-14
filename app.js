@@ -3,7 +3,6 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
 const PORT = process.env.PORT || 8080;
-const Listing = require("./models/listing");
 const path = require("path");
 const MONGO_URL = process.env.MONGO_URL;
 const methodOverride = require("method-override");
