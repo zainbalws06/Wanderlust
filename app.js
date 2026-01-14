@@ -27,7 +27,17 @@ app.get("/", (req, res) => {
   res.redirect("/listings");
 });
 
-//LISTEN
+//ERROR MIDDLEWARE
+app.use((err, req, res, next) => {
+  res.status(err.status || 500).json({
+    msg: `${err.message || "There was an error in the system"}`,
+    status: `${err.status || 500}`,
+  });
+  console.log(err);
+});
+
+//START
+
 function listen() {
   try {
     app.listen(PORT, () => {

@@ -1,13 +1,11 @@
 <%- include("../partials/header") %>
     <h1><%= listing.title%></h1>
    
-    <img src="<%= listing.image %>" alt="Apartment">    
+    <img class="img" src="<%= listing.image %>" alt="Apartment">    
 <p class="desc"><%= listing.description%></p>
 <p class="price">Price: <%= listing.price.toLocaleString("en-PK")%></p>
 <p class="location"> <%= listing.location%>/<%= listing.country%></p>
 <form method="get" action="/listings/<%= listing._id %>/edit"><button>Edit</button></form>
  <form method="post" action="/listings/<%= listing._id %>?_method=DELETE" ><button>Delete</button></form>
-</body>
-</html>
 
 <%- include("../partials/footer") %>
