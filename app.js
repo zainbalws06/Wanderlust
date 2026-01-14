@@ -50,14 +50,3 @@ async function main() {
   }
 }
 main();
-
-async function main() {
-  await mongoose.connect(MONGO_URL);
-}
-main()
-  .then(() => {
-    console.log("connection to db successful");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
